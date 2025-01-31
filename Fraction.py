@@ -40,8 +40,7 @@ class Fraction(object):
             for number in range(1, smaller+1):
                 if a % number == 0 and b % number == 0:
                     commonFactors.append(number)
-            # Sorts the elements of the common factors list, reverses it,
-            # then returns the first (biggest) element
+            # Sorts the elements of the common factors list, returns the first element
             commonFactors.sort(reverse=True)
             return commonFactors[0]
 
@@ -50,7 +49,8 @@ class Fraction(object):
 
     def get_denominator(self):
         return self.denominator//Fraction.gcd(self.numerator, self.denominator)
-
+    
     def get_fraction(self):
-        #TODO
-        pass
+        #by default concatenates the return values of get_nnumerator and
+        #get denominator into a fraction
+        return f"{self.get_numerator()}/{self.get_denominator()}"
