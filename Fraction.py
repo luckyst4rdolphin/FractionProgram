@@ -46,12 +46,10 @@ class Fraction(object):
             return commonFactors[0]
 
     def get_numerator(self):
-        #TODO
-        pass
+        return self.numerator//Fraction.gcd(self.numerator, self.denominator)
 
     def get_denominator(self):
-        #TODO
-        pass
+        return self.denominator//Fraction.gcd(self.numerator, self.denominator)
 
     def get_fraction(self):
         #TODO
