@@ -40,7 +40,8 @@ class Fraction(object):
             for number in range(1, smaller+1):
                 if a % number == 0 and b % number == 0:
                     commonFactors.append(number)
-            # Sorts the elements of the common factors list, returns the first element
+            # Sorts the elements of the common factors list, reverses it,
+            # then returns the first (biggest) element
             commonFactors.sort(reverse=True)
             return commonFactors[0]
 
